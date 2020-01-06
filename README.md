@@ -22,7 +22,7 @@ A Web Server as you like.<br>
 <p class="has-line-data" data-line-start="24" data-line-end="26"><a href="https://www.apachefriends.org/index.html">AMPP(APACHE + PHP)</a>v3.2.4 (so that you don’t need to install PHP or WebServer alone)<br>
 <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15">Microsoft SQL Server Management Studio 18</a></p>
 <pre><code class="has-line-data" data-line-start="27" data-line-end="30" class="language-sh">$ <span class="hljs-built_in">cd</span> XAMPP_DIR\htdocs
-$ <span class="hljs-built_in">clone</span> 
+$ <span class="hljs-built_in">clone git@github.com:sysescool/CarCare.git</span> 
 </code></pre>
 <p class="has-line-data" data-line-start="30" data-line-end="37">edit XAMPP_DIR\apache\conf\httpd.conf<br>
 Find:DocumentRoot “X:/xampp/htdocs”<br>
