@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CarCare - 登录界面</title>
+    <!--
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    -->
+    <!--<link href="../common/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="__STATIC__/static/main.css" rel="stylesheet">
+    <!--<link href="__STATIC__/static/favicon.ico" rel="shortcut icon">-->
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./favicon.ico" rel="shortcut icon">
+
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--<script type="text/javascript" src="./static/common/URL.js"></script>
+    <script type="text/javascript" src="./static/common/md5.js" ></script>
+    <script type="text/javascript" src="./static/common/js/login.js" ></script>-->
+
+</head>
+<!--<script type="text/javascript" src="/static/common/jquery-3.2.1.min.js">-->
+
+
+
+
+<body>
+
+{load href="/static/static/md5.js,/static/static/login.js" /}
+
+
+
+
+
+<script>
+    function enKeyPress() {
+        if (event.keyCode === 13) {
+            MCSERVER.btnLogin();
+        }
+    }
+</script>
+
+
+    <!-- 背景图片 -->
+    <div id="mview_background" class="phone_not">
+        <!-- 请前往 main.css 文件修改 -->
+    </div>
+
+
+    <!-- 登录框 -->
+    <div id="mlogin_center">
+        <div id="mlogin_left">
+            <!-- 内容 -->
+            <div id="mlogin_left_context" class="phone_not">
+                <h3>欢迎使用</h3>
+                <p>简单，快捷，让你的日常操作更加简单。</p>
+                <p>感谢支持，感谢使用。</p>
+
+            </div>
+            <p class="mlogin_context_footer">
+                <span>©2019-2020 SysesCool. All rights reserved.</span>
+            </p>
+
+
+
+
+
+
+
+            <!--登录 -->
+            <div id="mlogin_right">
+                <div id="mlogin_view">
+                    <h4>登录</h4>
+                    <p>使用您的 CarCare 账户 </p>
+
+                    <form id="mlogin_form"action="" class="login-form" method="post">
+                    <!--<div id="mlogin_form">-->
+                        <p>用户名</p>
+                        <input id="login-userid" type="text" class="minput" placeholder="普通账号 | 管理用户" name="username" onkeypress="enKeyPress()" />
+                        <p>密码</p>
+                        <input id="login-passwd" type="password" class="minput" placeholder="账号密码" name="password" onkeypress="enKeyPress()" />
+                       <!--<p>验证码</p>-->
+                        <div style="height:50px;width:400px;float:left;">
+                            <input  type="text" autocomplete="off" placeholder="" name="code" style="width:100px;" required/>
+                            <img  src="{:url('index/login/verify')}" onclick="this.src='{:url(\'index/login/verify\')}?d='+Math.random();">
+                        </div>
+                        <!--<button id="login-button" class="mbutton" onclick="MCSERVER.btnLogin()">验证</button>-->
+                        <button id="login-button" class="mbutton" type="submit" >登录</button>
+
+
+                        <a href="#" class="mlogin_forge" onclick="alert('请联系管理员更改密码，如果您是管理员，请查阅手册第3页第一章用户最后一节忘记密码')">
+                            忘记密码?
+                        </a>
+                        <a href="#" class="mlogin_forge" onclick="alert('暂无帮助提供')">
+                            需要帮助?
+                        </a>
+                    <!--</div>-->
+                    </form>
+
+
+
+                    <p class="mlogin_context_footer phone">
+                        <span>©2013-2018 Suwings. All rights reserved.</span>
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+
+</html>

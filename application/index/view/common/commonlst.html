@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>
+        {$titlename}
+    </title>
+</head>
+<body>
+<form action="" method="post">
+    <table>
+        <thead>
+        {foreach $tabletitles as $key }
+        <?php echo '<th>' ?>
+        {$key.""}
+        <?php echo '</th>' ?>
+        {/foreach}
+        </thead>
+        <tbody>
+        {php}
+        foreach ($contents as $project){
+        echo '<tr>';
+            foreach(json_decode($project) as $key=>$value){
+            echo '<td>';
+                echo $value;
+                echo '</td>';
+            }
+            //echo "<td>";
+                $num = $project["saffid"];
+                //echo "</td>";
+            echo "<td><a href='..\\..$editurl$num' class=\'btn btn-sm blue\'>编辑<i></i></a>";
+                echo ' ';
+                echo "<a href='..\\..\\cate\\del\\$num'>删除<i></i></a></td>";
+            }
+            echo '</tr>';
+        {/php}
+        <tr>
+            <td></td>
+            <td>
+                <input class="btn btn-primary btn-sm shiny" style="margin-left:224px; margin-top:10px;text-align: center" type="submit" value="排序" >
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        </tbody>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!-- BEGIN HEADER & CONTENT DIVIDER -->
+<div class="clearfix"> </div>
+<!-- END HEADER & CONTENT DIVIDER -->
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+        <!-- BEGIN SIDEBAR -->
+        <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+        <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+        <div class="page-sidebar navbar-collapse collapse">
+            <!-- BEGIN SIDEBAR MENU -->
+            <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+            <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+            <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+            <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+            <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+            <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+                <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                <li class="sidebar-toggler-wrapper hide">
+                    <div class="sidebar-toggler">
+                        <span></span>
+                    </div>
+                </li>
+
+                <li class="heading">
+                    <h3 class="uppercase">首页</h3>
+                </li>
+
+                <!-- END SIDEBAR TOGGLER BUTTON -->
+                <li class="nav-item start active open">
+                    <a href="" class="nav-link nav-toggle">
+                        <i class="icon-home"></i>
+                        <span class="title">首页</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+                <!--<li class="heading">
+                    <h3 class="uppercase">Features</h3>
+                </li>-->
+                <!--人员管理-->
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-diamond"></i>
+                        <span class="title">人员管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item  ">
+                            <a href="{:url('index/staff/add')}" class="nav-link ">
+                                <span class="title">添加人员</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{:url('index/staff/lst')}" class="nav-link ">
+                                <span class="title">查看人员</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!--项目管理-->
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-diamond"></i>
+                        <span class="title">项目管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item  ">
+                            <a href="{:url('index/project/add')}" class="nav-link ">
+                                <span class="title">添加服务</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{:url('index/project/lst')}" class="nav-link ">
+                                <span class="title">查看服务</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--顾客管理-->
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-diamond"></i>
+                        <span class="title">顾客管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item  ">
+                            <a href="{:url('index/customer/add')}" class="nav-link ">
+                                <span class="title">添加顾客</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{:url('index/customer/lst')}" class="nav-link ">
+                                <span class="title">查看顾客</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--车辆管理-->
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-diamond"></i>
+                        <span class="title">车辆管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item  ">
+                            <a href="{:url('index/vehicle/add')}" class="nav-link ">
+                                <span class="title">添加车辆</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{:url('index/vehicle/lst')}" class="nav-link ">
+                                <span class="title">查看车辆</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--车主关系-->
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-diamond"></i>
+                        <span class="title">车主管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item  ">
+                            <a href="{:url('index/owner/add')}" class="nav-link ">
+                                <span class="title">添加关系</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{:url('index/owner/lst')}" class="nav-link ">
+                                <span class="title">查看关系</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--订单管理-->
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-diamond"></i>
+                        <span class="title">订单管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item  ">
+                            <a href="{:url('index/order/add')}" class="nav-link ">
+                                <span class="title">添加订单</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{:url('index/order/lst')}" class="nav-link ">
+                                <span class="title">查看订单</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--报表分析-->
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-diamond"></i>
+                        <span class="title">报表分析</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <!--<li class="nav-item  ">
+                            <a href="{:url('index/table/add')}" class="nav-link ">
+                                <span class="title">添加报表</span>
+                            </a>
+                        </li>-->
+                        <li class="nav-item  ">
+                            <a href="{:url('index/table/lst')}" class="nav-link ">
+                                <span class="title">查看报表</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <!-- END SIDEBAR MENU -->
+            <!-- END SIDEBAR MENU -->
+        </div>
+        <!-- END SIDEBAR -->
+    </div>
+    <!-- END SIDEBAR -->

@@ -1,0 +1,46 @@
+<html>
+<head>
+
+</head>
+<body>
+                                <form action="" method="post">
+                                    <table>
+                                        <thead class="flip-content">
+                                        <tr>
+                                            <th> ID </th>
+                                            <th> 排序 </th>
+                                            <th> 栏目名称 </th>
+                                            <th> 操作 </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {volist name="cateres" id="cate"}
+                                        <tr>
+                                            <td> {$cate.id} </td>
+                                            <td>
+                                                <input name="{$cate.id}" type="text" class="form-control input-sm" placeholder="排序" value="{$cate.sort}">
+                                            </td>
+                                            <td> {if condition="$cate['level'] neq 0"}|{/if}<?php echo str_repeat('-', $cate['level']*8)?>{$cate.catename} </td>
+                                            <td>
+                                                <a href="{:url('index/cate/edit',array('id'=>$cate['id']))}" class="btn btn-sm blue"> 编辑
+                                                    <i></i>
+                                                </a>
+                                                <a href="{:url('index/cate/del',array('id'=>$cate['id']))}"> 删除
+                                                    <i></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {/volist}
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <input class="btn btn-primary btn-sm shiny" style="margin-left:224px; margin-top:10px;text-align: center" type="submit" value="排序" >
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+参考:
+https://docs.microsoft.com/en-us/sql/connect/php/getting-started-with-the-php-sql-driver?view=sql-server-ver15
+
+首先cmd进入到php所在目录运行php --version
+ZTS: 线程安全
+NTS: 线程不安全
+进入php目录, 查看有php7ts.dll 还是有php7.dll
+我是ZST, php7ts.dll, version7.3.6, 64
+
+根据https://docs.microsoft.com/en-us/sql/connect/php/system-requirements-for-the-php-sql-driver?view=sql-server-ver15
+选择对应版本, 我是7.3.0+ 选择5.6
+进入
+https://docs.microsoft.com/en-us/sql/connect/php/download-drivers-php-sql-server?view=sql-server-ver15
+进行下载
+
+下载解压到对应目录, 进入对应目录, 查看SQLSRV_Readme.htm
+我是ZTS, php7ts.dll, version7.3.6, 64位
+所以选择:
+php_sqlsrv_73_ts_x64.dll
+php_pdo_sqlsrv_73_ts_x64.dll
+
+再次进入cmd到对应目录, 执行php -i | grep extension_dir
+输出一个扩展目录: 将以上两个dll移进去
+编辑该目录下php.ini, 插入两行:
+extension=php_sqlsrv_73_ts_x64.dll
+extension=php_pdo_sqlsrv_73_ts_x64.dll
+
+重新启动Web服务器(Apache, Nginx.....)
+
+参考
+https://docs.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver15
+选择你需要的版本, 这里我选用的是
+Microsoft ODBC Driver 17 for SQL Server
+下载注意64位还是32位, 运行的时候, 记得把
+ODBC Driver for SQL Server SDK
+选为"整个功能将安装到本地硬盘上"
+
+
+然后可以尝试重新连接了
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
